@@ -3,6 +3,8 @@ Elastic Search Chef Cookbook
 
 I couldn't find a great elastic search chef cookbook, so I wrote this one.
 
+Includes support for mongo db river auto index
+
 
 license
 =======
