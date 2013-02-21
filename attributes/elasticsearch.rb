@@ -1,4 +1,4 @@
-default[:elasticsearch][:version] = '0.19.10'
+default[:elasticsearch][:version] = '0.20.5'
 default[:elasticsearch][:es_user] = "elasticsearch"
 default[:elasticsearch][:config] = "/etc/init/elasticsearch.conf"
 default[:elasticsearch][:java_home] = "/usr/lib/jvm/java-7-openjdk-i386"
