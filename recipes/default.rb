@@ -74,24 +74,24 @@ directory node[:elasticsearch][:mongo_plugin_dir] do
 end
 
 #move jars for mongo river
-cookbook_file "#{node[:elasticsearch][:mongo_plugin_dir]}/mongo-2.9.1.jar" do
-  source "mongo-2.9.1.jar"
+cookbook_file "#{node[:elasticsearch][:mongo_plugin_dir]}/#{node[:elasticsearch][:mongojar]}" do
+  source "#{node[:elasticsearch][:mongojar]}"
   owner "#{node[:elasticsearch][:es_user]}"
   group "#{node[:elasticsearch][:es_user]}"
   mode "0555"
   notifies :reload, 'service[elasticsearch]'
 end
 
-cookbook_file "#{node[:elasticsearch][:mongo_plugin_dir]}/elasticsearch-river-mongodb-1.4.0-SNAPSHOT.jar" do
-  source "elasticsearch-river-mongodb-1.4.0-SNAPSHOT.jar"
+cookbook_file "#{node[:elasticsearch][:mongo_plugin_dir]}/#{node[:elasticsearch][:mongoriver]}" do
+  source "#{node[:elasticsearch][:mongoriver]}"
   owner "#{node[:elasticsearch][:es_user]}"
   group "#{node[:elasticsearch][:es_user]}"
   mode "0555"
   notifies :reload, 'service[elasticsearch]'
 end
 
-cookbook_file "#{node[:elasticsearch][:mongo_plugin_dir]}/elasticsearch-mapper-attachments-1.7.0-SNAPSHOT.jar" do
-  source "elasticsearch-mapper-attachments-1.7.0-SNAPSHOT.jar"
+cookbook_file "#{node[:elasticsearch][:mongo_plugin_dir]}/#{node[:elasticsearch][:mongomapper]}" do
+  source "#{node[:elasticsearch][:mongomapper]}"
   owner "#{node[:elasticsearch][:es_user]}"
   group "#{node[:elasticsearch][:es_user]}"
   mode "0555"

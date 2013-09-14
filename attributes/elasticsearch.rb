@@ -1,6 +1,10 @@
 default[:elasticsearch][:version] = '0.90.3'
 default[:elasticsearch][:es_user] = "elasticsearch"
 default[:elasticsearch][:download_url] = "https://download.elasticsearch.org/elasticsearch/elasticsearch/"
+default[:elasticsearch][:mongoriver] = "elasticsearch-river-mongodb-1.6.10-SNAPSHOT.jar"
+default[:elasticsearch][:mongomapper] = "elasticsearch-mapper-attachments-1.8.0-SNAPSHOT.jar"
+default[:elasticsearch][:mongojar] = "mongo-java-driver-2.9.3.jar"
+
 default[:elasticsearch][:config] = "/etc/init/elasticsearch.conf"
 default[:elasticsearch][:java_home] = "/usr/lib/jvm/java-7-openjdk-i386"
 default[:elasticsearch][:extract] = "/usr/local/"
