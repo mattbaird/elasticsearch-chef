@@ -1,5 +1,6 @@
-default[:elasticsearch][:version] = '0.20.5'
+default[:elasticsearch][:version] = '0.90.3'
 default[:elasticsearch][:es_user] = "elasticsearch"
+default[:elasticsearch][:download_url] = "https://download.elasticsearch.org/elasticsearch/elasticsearch/"
 default[:elasticsearch][:config] = "/etc/init/elasticsearch.conf"
 default[:elasticsearch][:java_home] = "/usr/lib/jvm/java-7-openjdk-i386"
 default[:elasticsearch][:extract] = "/usr/local/"

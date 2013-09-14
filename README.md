@@ -3,6 +3,8 @@ Elastic Search Chef Cookbook
 
 I couldn't find a great elastic search chef cookbook, so I wrote this one.
 
+Tested for version 0.90.3 of Elasticsearch
+
 Includes support for mongo db river auto index
 
 

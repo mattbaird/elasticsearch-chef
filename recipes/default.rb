@@ -108,7 +108,7 @@ end
 
 # download a binary release, if new
 remote_file "/tmp/elasticsearch-#{node[:elasticsearch][:version]}.tar.gz" do
-  source "http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-#{node[:elasticsearch][:version]}.tar.gz"
+  source "#{node[:elasticsearch][:download_url]}#{node[:elasticsearch][:version]}.tar.gz"
   not_if "test -f /tmp/elasticsearch-#{node[:elasticsearch][:version]}.tar.gz"
 end
 
